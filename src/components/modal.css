@@ -1,0 +1,23 @@
+@import "./variables.css";
+
+.modal {
+  display: none;
+  font-family: var(--font-family);
+  border: var(--modal-border);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal.open {
+  display: block;
+}
+
+.modal__title {
+  margin: 0;
+}
+
+.modal__body {
+  padding-top: 20px;
+}

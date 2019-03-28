@@ -5,8 +5,9 @@
     --card-complete-background: #e9e9f0;
     --card-title-color: #000;
     --card-color: #8d8896;
-    --card-border: 2px solid #e9e9f0;
-    --card-border-radius: 5px;
+    --card-border: 2px solid var(--border-color);
+
+    --modal-border: 2px solid var(--border-color);
 
     --action-blue: #49a8f6;
     --action-purple: #7f50fe;
@@ -14,5 +15,7 @@
 
     --button-color: #fff;
 
-    --font-family: 'sans-serif';
+    --font-family: sans-serif;
+    --border-color: #e9e9f0;
+    --border-radius: 5px;
 }

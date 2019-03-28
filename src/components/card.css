@@ -1,12 +1,14 @@
+@import "./variables.css";
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   justify-content: center;
   align-items: stretch;
-  border-radius: var(--card-border-radius);
+  border-radius: var(--border-radius);
   background-color: #fff;
-  font-family: sans-serif;
+  font-family: var(--font-family);
   width: 100%;
   max-width: 250px;
 }
@@ -16,8 +18,8 @@
   padding: 20px 10px 0 10px;
   font-size: 15px;
   font-weight: 600;
-  border-top-right-radius: var(--card-border-radius);
-  border-top-left-radius: var(--card-border-radius);
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
   border: var(--card-border);
   border-bottom: none;
   color: var(--card-title-color);
@@ -41,9 +43,9 @@
 .card__button-bar:empty {
   border: var(--card-border);
   border-top: none;
-  border-bottom-left-radius: var(--card-border-radius);
-  border-bottom-right-radius: var(--card-border-radius);
-  height: var(--card-border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  height: var(--border-radius);
 }
 
 .card__button-bar .button {
@@ -52,9 +54,9 @@
 }
 
 .card__button-bar .button:first-child {
-  border-bottom-left-radius: var(--card-border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 .card__button-bar .button:last-child {
-  border-bottom-right-radius: var(--card-border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
