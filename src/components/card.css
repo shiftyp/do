@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
   justify-content: center;
   align-items: stretch;
   border-radius: var(--card-border-radius);
@@ -31,6 +30,7 @@
   border-top: none;
   color: var(--card-color);
   font-size: 0.9em;
+  flex: 1;
 }
 
 .card__button-bar {
@@ -43,9 +43,18 @@
   border-top: none;
   border-bottom-left-radius: var(--card-border-radius);
   border-bottom-right-radius: var(--card-border-radius);
+  height: var(--card-border-radius);
 }
 
 .card__button-bar .button {
   display: block;
   flex: 1;
+}
+
+.card__button-bar .button:first-child {
+  border-bottom-left-radius: var(--card-border-radius);
+}
+
+.card__button-bar .button:last-child {
+  border-bottom-right-radius: var(--card-border-radius);
 }
