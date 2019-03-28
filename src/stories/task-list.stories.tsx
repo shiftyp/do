@@ -3,13 +3,23 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { Board } from '../components/board';
+import { TaskList } from '../components/task-list';
+import { Button } from '../components/button';
 import { TaskStatus } from '../components/types';
 
-const { add } = storiesOf('Board', module);
+const { add } = storiesOf('Task List', module);
 
-add('it works', () => (
-  <Board
+add('Empty', () => <TaskList title="Complete" tasks={[]} />);
+
+add('With Button', () => (
+  <TaskList title="Complete" tasks={[]}>
+    <Button label="Create Task" action={action('create task')} color="blue" />
+  </TaskList>
+));
+
+add('With Tasks', () => (
+  <TaskList
+    title="Complete"
     tasks={[
       {
         title: 'Basic Task',
@@ -33,5 +43,7 @@ add('it works', () => (
         completed: new Date(),
       },
     ]}
-  />
+  >
+    <Button label="Create Task" action={action('create task')} color="blue" />
+  </TaskList>
 ));

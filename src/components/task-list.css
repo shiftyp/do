@@ -1,0 +1,7 @@
+.task-list > .card__body > .card {
+  margin-bottom: 10px;
+}
+
+.task-list > .card__body > .card:last-child {
+  margin-bottom: 0;
+}

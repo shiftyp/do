@@ -1,0 +1,13 @@
+.task-card.completed {
+  background-color: var(--card-complete-background);
+}
+
+.task-card__date {
+  font-style: italic;
+  color: var(--action-purple);
+  font-size: 0.8em;
+}
+
+.task-card__date.completed {
+  color: var(--action-green);
+}
