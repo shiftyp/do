@@ -1,0 +1,14 @@
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.board > .card {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.board > .card:first-child {
+  margin-left: 0;
+}
