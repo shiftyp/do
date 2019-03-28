@@ -1,0 +1,20 @@
+@import "./variables.css";
+
+.button {
+  border: none;
+  color: var(--button-color);
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+.button-blue {
+  background-color: var(--action-blue);
+}
+
+.button-purple {
+  background-color: var(--action-purple);
+}
+
+.button-green {
+  background-color: var(--action-green);
+}

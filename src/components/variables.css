@@ -1,0 +1,17 @@
+:root {
+    --page-background: #f4f3f8;
+
+    --card-background: #fff;
+    --card-title-color: #000;
+    --card-color: #8d8896;
+    --card-border: 2px solid #e9e9f0;
+    --card-border-radius: 5px;
+
+    --action-blue: #49a8f6;
+    --action-purple: #7f50fe;
+    --action-green: #13d1bd;
+
+    --button-color: #fff;
+
+    --font-family: 'sans-serif';
+}

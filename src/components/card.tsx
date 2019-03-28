@@ -13,11 +13,12 @@ export const Card: React.SFC<CardProps> = ({
   buttons,
   className = '',
 }) => {
+  
   return (
     <div className={`card ${className}`}>
       <h2 className="card__title">{title}</h2>
-      {children && <div className="card__body">{children}</div>}
-      {buttons && <div className="card__button-bar">{buttons}</div>}
+      <div className="card__body">{children}</div>
+      <div className="card__button-bar">{buttons}</div>
     </div>
   );
 };
