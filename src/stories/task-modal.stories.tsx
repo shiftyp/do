@@ -7,7 +7,7 @@ import { TaskModal } from '../components/task-modal';
 import { TaskStatus } from '../components/types';
 import { makeBasicTask } from './utils';
 
-const { add } = storiesOf('Task Modal', module);
+const { add } = storiesOf('Task Components/Task Modal', module);
 
 add('Create', () => <TaskModal open={true} />);
 add('Edit', () => (

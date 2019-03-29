@@ -7,7 +7,7 @@ import { TaskCard } from '../components/task-card';
 import { TaskStatus } from '../components/types';
 import { makeBasicTask } from './utils';
 
-const { add } = storiesOf('Task Card', module);
+const { add } = storiesOf('Task Components/Task Card', module);
 
 add('Backlog task', () => (
   <TaskCard task={makeBasicTask(TaskStatus.BACKLOG)} />

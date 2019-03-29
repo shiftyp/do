@@ -5,12 +5,15 @@ import { action } from '@storybook/addon-actions';
 
 import { Modal } from '../components/modal';
 
-const { add } = storiesOf('Modal', module);
+const { add } = storiesOf('Basic Components/Modal', module);
 
 add('Closed', () => (
-  <Modal open={false} title="You shouldn't see this">
-    Or this
-  </Modal>
+  <div>
+    You should see this and nothing else.
+    <Modal open={false} title="You shouldn't see this">
+      Or this
+    </Modal>
+  </div>
 ));
 
 add('With Text', () => (

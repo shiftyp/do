@@ -7,7 +7,7 @@ import { TaskForm } from '../components/task-form';
 import { TaskStatus } from '../components/types';
 import { makeBasicTask } from './utils';
 
-const { add } = storiesOf('Task Form', module);
+const { add } = storiesOf('Task Components/Task Form', module);
 
 add('Create', () => <TaskForm />);
 add('Edit', () => <TaskForm task={makeBasicTask(TaskStatus.BACKLOG)} />);

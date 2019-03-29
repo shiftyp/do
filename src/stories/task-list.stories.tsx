@@ -7,7 +7,7 @@ import { TaskList } from '../components/task-list';
 import { Button } from '../components/button';
 import { basicTasks, manyTasks } from './utils';
 
-const { add } = storiesOf('Task List', module);
+const { add } = storiesOf('Task Components/Task List', module);
 
 add('Empty', () => <TaskList title="Complete" tasks={[]} />);
 

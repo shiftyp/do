@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import { Button } from '../components/button';
 
-const { add } = storiesOf('Button', module);
+const { add } = storiesOf('Basic Components/Button', module);
 
 add('colors!', () => (
   <React.Fragment>

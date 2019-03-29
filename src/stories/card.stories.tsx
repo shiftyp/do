@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import { Card } from '../components/card';
 import { Button } from '../components/button';
 
-const { add } = storiesOf('Card', module);
+const { add } = storiesOf('Basic Components/Card', module);
 
 add('Empty', () => <Card title="Empty" />)
 
