@@ -5,13 +5,13 @@
     --card-complete-background: #e9e9f0;
     --card-title-color: #000;
     --card-color: #8d8896;
-    --card-border: 2px solid var(--border-color);
 
-    --modal-border: 2px solid var(--border-color);
+    --border: 2px solid var(--border-color);
 
     --action-blue: #49a8f6;
     --action-purple: #7f50fe;
     --action-green: #13d1bd;
+    --action-red: #fe0322;
 
     --button-color: #fff;
 

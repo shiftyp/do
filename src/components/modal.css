@@ -3,7 +3,8 @@
 .modal {
   display: none;
   font-family: var(--font-family);
-  border: var(--modal-border);
+  background-color: #fff;
+  filter: drop-shadow(0px 7px 10px #bbbbbb);
   border-radius: var(--border-radius);
   padding: 20px;
   width: 100%;

@@ -18,3 +18,12 @@
 .button-green {
   background-color: var(--action-green);
 }
+
+.button-red {
+  background-color: var(--action-red);
+}
+
+.button-white {
+  background-color: #fff;
+  color: var(--action-purple);
+}

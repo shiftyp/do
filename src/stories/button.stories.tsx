@@ -12,5 +12,7 @@ add('colors!', () => (
     <Button label="Blue" color="blue" action={action('blue pressed')} />
     <Button label="Puple" color="purple" action={action('purple pressed')} />
     <Button label="Green" color="green" action={action('green pressed')} />
+    <Button label="Red" color="red" action={action('red pressed')} />
+    <Button label="White" color="white" action={action('white pressed')} />
   </React.Fragment>
 ));

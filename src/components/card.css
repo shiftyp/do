@@ -20,14 +20,14 @@
   font-weight: 600;
   border-top-right-radius: var(--border-radius);
   border-top-left-radius: var(--border-radius);
-  border: var(--card-border);
+  border: var(--border);
   border-bottom: none;
   color: var(--card-title-color);
 }
 
 .card__body {
   padding: 20px 10px 20px 10px;
-  border: var(--card-border);
+  border: var(--border);
   border-bottom: none;
   border-top: none;
   color: var(--card-color);
@@ -41,7 +41,7 @@
 }
 
 .card__button-bar:empty {
-  border: var(--card-border);
+  border: var(--border);
   border-top: none;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);

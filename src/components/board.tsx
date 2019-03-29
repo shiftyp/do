@@ -1,10 +1,12 @@
 import React from 'react';
-import { Card } from './card';
+
+import { Task, TaskStatus } from './types';
+
 import { Button } from './button';
+import { TaskList } from './task-list';
+import { TaskModal } from './task-modal';
 
 import './board.css';
-import { TaskList } from './task-list';
-import { Task, TaskStatus } from './types';
 
 export type BoardComponentProps = { tasks: Task[] };
 
@@ -38,5 +40,6 @@ export const Board: React.SFC<BoardComponentProps> = ({ tasks }) => (
     <BacklogList tasks={tasks} />
     <InProgressList tasks={tasks} />
     <CompletedList tasks={tasks} />
+    <TaskModal open={false} />
   </div>
 );
