@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import { TaskList } from '../components/task-list';
 import { Button } from '../components/button';
-import { TaskStatus } from '../components/types';
+import { basicTasks, manyTasks } from './utils';
 
 const { add } = storiesOf('Task List', module);
 
@@ -18,32 +18,13 @@ add('With Button', () => (
 ));
 
 add('With Tasks', () => (
-  <TaskList
-    title="Complete"
-    tasks={[
-      {
-        title: 'Basic Task',
-        description: 'A basic task.',
-        status: TaskStatus.BACKLOG,
-        due: new Date(),
-        completed: null,
-      },
-      {
-        title: 'Basic Task',
-        description: 'A basic task.',
-        status: TaskStatus.IN_PROGRESS,
-        due: new Date(),
-        completed: null,
-      },
-      {
-        title: 'Basic Task',
-        description: 'A basic task.',
-        status: TaskStatus.COMPLETED,
-        due: new Date(),
-        completed: new Date(),
-      },
-    ]}
-  >
+  <TaskList title="Complete" tasks={basicTasks}>
+    <Button label="Create Task" action={action('create task')} color="blue" />
+  </TaskList>
+));
+
+add('With Many Tasks', () => (
+  <TaskList title="Complete" tasks={manyTasks}>
     <Button label="Create Task" action={action('create task')} color="blue" />
   </TaskList>
 ));

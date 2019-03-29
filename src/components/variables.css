@@ -1,5 +1,7 @@
 :root {
     --page-background: #f4f3f8;
+    --modal-background: #cccccc;
+    --modal-background-opacity: 0.5;
 
     --card-background: #fff;
     --card-complete-background: #e9e9f0;

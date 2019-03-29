@@ -2,6 +2,27 @@
 
 .modal {
   display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.modal.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--modal-background);
+  opacity: var(--modal-background-opacity);
+}
+
+.modal__window {
   font-family: var(--font-family);
   background-color: #fff;
   filter: drop-shadow(0px 7px 10px #bbbbbb);
@@ -9,10 +30,7 @@
   padding: 20px;
   width: 100%;
   max-width: 400px;
-}
-
-.modal.open {
-  display: block;
+  height: auto;
 }
 
 .modal__title {

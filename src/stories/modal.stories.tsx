@@ -7,19 +7,19 @@ import { Modal } from '../components/modal';
 
 const { add } = storiesOf('Modal', module);
 
-add('closed', () => (
+add('Closed', () => (
   <Modal open={false} title="You shouldn't see this">
     Or this
   </Modal>
 ));
 
-add('with text', () => (
+add('With Text', () => (
   <Modal title="Hello" open={true}>
     World
   </Modal>
 ));
 
-add('with some emoji', () => (
+add('With Some Emoji', () => (
   <Modal open={true} title="Emojis">
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯

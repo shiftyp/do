@@ -4,34 +4,23 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { Board } from '../components/board';
-import { TaskStatus } from '../components/types';
+import { TaskStatus, Task } from '../components/types';
+import { manyTasks, makeBasicTask, basicTasks } from './utils';
 
 const { add } = storiesOf('Board', module);
 
-add('it works', () => (
+add('Empty', () => <Board tasks={[]} />);
+
+add('With Tasks', () => <Board tasks={basicTasks} />);
+
+add('With Many Tasks', () => <Board tasks={manyTasks} />);
+
+add('With Create Modal', () => <Board tasks={manyTasks} showModal={true} />);
+
+add('With Edit Modal', () => (
   <Board
-    tasks={[
-      {
-        title: 'Basic Task',
-        description: 'A basic task.',
-        status: TaskStatus.BACKLOG,
-        due: new Date(),
-        completed: null,
-      },
-      {
-        title: 'Basic Task',
-        description: 'A basic task.',
-        status: TaskStatus.IN_PROGRESS,
-        due: new Date(),
-        completed: null,
-      },
-      {
-        title: 'Basic Task',
-        description: 'A basic task.',
-        status: TaskStatus.COMPLETED,
-        due: new Date(),
-        completed: new Date(),
-      },
-    ]}
+    tasks={manyTasks}
+    showModal={true}
+    editingTask={makeBasicTask(TaskStatus.BACKLOG)}
   />
 ));

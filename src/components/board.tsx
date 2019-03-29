@@ -8,7 +8,7 @@ import { TaskModal } from './task-modal';
 
 import './board.css';
 
-export type BoardComponentProps = { tasks: Task[] };
+export type BoardComponentProps = { tasks: Task[]; editingTask?: Task, showModal?: boolean };
 
 const CompletedList = ({ tasks }: BoardComponentProps) => (
   <TaskList
@@ -35,11 +35,11 @@ const BacklogList = ({ tasks }: BoardComponentProps) => (
   </TaskList>
 );
 
-export const Board: React.SFC<BoardComponentProps> = ({ tasks }) => (
+export const Board: React.SFC<BoardComponentProps> = ({ tasks, showModal, editingTask }) => (
   <div className="board">
     <BacklogList tasks={tasks} />
     <InProgressList tasks={tasks} />
     <CompletedList tasks={tasks} />
-    <TaskModal open={false} />
+    <TaskModal open={showModal} task={editingTask} />
   </div>
 );

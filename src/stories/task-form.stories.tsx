@@ -5,18 +5,9 @@ import { action } from '@storybook/addon-actions';
 
 import { TaskForm } from '../components/task-form';
 import { TaskStatus } from '../components/types';
+import { makeBasicTask } from './utils';
 
 const { add } = storiesOf('Task Form', module);
 
-add('Create', () => (
-  <TaskForm />
-));
-add('Edit', () => (
-  <TaskForm task={{
-    title: 'Basic Task',
-    description: 'A basic task.',
-    status: TaskStatus.BACKLOG,
-    due: new Date(),
-    completed: null,
-  }}/>
-));
+add('Create', () => <TaskForm />);
+add('Edit', () => <TaskForm task={makeBasicTask(TaskStatus.BACKLOG)} />);
