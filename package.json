@@ -2,6 +2,7 @@
   "name": "do",
   "version": "0.0.0",
   "description": "",
+  "homepage": "https://shiftyp.github.io/do",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
