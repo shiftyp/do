@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button } from './button';
-import { Task } from './types';
+import { Task } from '../types';
 
 import './task-form.css';
 

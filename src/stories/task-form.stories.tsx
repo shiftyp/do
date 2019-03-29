@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { TaskForm } from '../components/task-form';
-import { TaskStatus } from '../components/types';
+import { TaskStatus } from '../types';
 import { makeBasicTask } from './utils';
 
 const { add } = storiesOf('Task Components/Task Form', module);

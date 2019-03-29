@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { TaskBoard } from '../components/task-board';
-import { TaskStatus, Task } from '../components/types';
+import { TaskStatus, Task } from '../types';
 import { manyTasks, makeBasicTask, basicTasks } from './utils';
 
 const { add } = storiesOf('Task Components/Task Board', module);

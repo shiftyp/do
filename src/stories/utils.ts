@@ -1,4 +1,4 @@
-import { TaskStatus, Task } from "../components/types";
+import { TaskStatus, Task } from "../types";
 
 export const makeBasicTask = (status: TaskStatus): Task => ({
   title: 'Basic Task',

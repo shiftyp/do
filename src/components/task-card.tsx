@@ -1,5 +1,5 @@
 import React from 'react';
-import { Task, TaskStatus } from './types';
+import { Task, TaskStatus } from '../types';
 import { Button } from './button';
 import { Card } from './card';
 
