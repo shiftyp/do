@@ -7,7 +7,7 @@ import { TaskBoard } from '../components/task-board';
 import { TaskStatus, Task } from '../components/types';
 import { manyTasks, makeBasicTask, basicTasks } from './utils';
 
-const { add } = storiesOf('Board', module);
+const { add } = storiesOf('Task Board', module);
 
 add('Empty', () => <TaskBoard tasks={[]} />);
 

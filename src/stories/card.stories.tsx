@@ -8,9 +8,11 @@ import { Button } from '../components/button';
 
 const { add } = storiesOf('Card', module);
 
-add('with text', () => <Card title="Hello">World</Card>);
+add('Empty', () => <Card title="Empty" />)
 
-add('with some emoji', () => (
+add('With Text', () => <Card title="Hello">World</Card>);
+
+add('With Some Emoji', () => (
   <Card title="Emojis">
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -18,7 +20,7 @@ add('with some emoji', () => (
   </Card>
 ));
 
-add('with some buttons', () => {
+add('With Some Buttons', () => {
   const buttons = (
     <React.Fragment>
       <Button color="blue" label="Foo" action={action('foo buttton clicked')} />
@@ -35,7 +37,7 @@ add('with some buttons', () => {
   );
 });
 
-add('with an inner card', () => {
+add('With Inner Card', () => {
   const outerButtons = (
     <React.Fragment>
       <Button color="purple" label="Baz" action={action('baz buttton clicked')} />
