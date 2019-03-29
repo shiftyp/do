@@ -1,14 +1,18 @@
+import { number } from "prop-types";
+
 export enum TaskStatus {
   BACKLOG,
   IN_PROGRESS,
   COMPLETED,
 }
 
+export type TaskId = number;
+
 export type Task = {
-  id?: number;
-  title: string;
-  status: TaskStatus;
-  description: string;
-  due: Date;
-  completed: Date | null;
+  readonly id?: TaskId;
+  readonly title: string;
+  readonly status: TaskStatus;
+  readonly description: string;
+  readonly due: Date;
+  readonly completed: Date | null;
 };

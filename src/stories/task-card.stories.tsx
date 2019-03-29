@@ -1,22 +1,30 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
 import { TaskCard } from '../components/task-card';
 import { TaskStatus } from '../types';
-import { makeBasicTask } from './utils';
+import { makeBasicTask, taskBoardActions } from './utils';
 
 const { add } = storiesOf('Task Components/Task Card', module);
 
 add('Backlog task', () => (
-  <TaskCard task={makeBasicTask(TaskStatus.BACKLOG)} />
+  <TaskCard
+    task={makeBasicTask(TaskStatus.BACKLOG)}
+    actions={taskBoardActions}
+  />
 ));
 
 add('In Progress task', () => (
-  <TaskCard task={makeBasicTask(TaskStatus.IN_PROGRESS)} />
+  <TaskCard
+    task={makeBasicTask(TaskStatus.IN_PROGRESS)}
+    actions={taskBoardActions}
+  />
 ));
 
 add('Completed task', () => (
-  <TaskCard task={makeBasicTask(TaskStatus.COMPLETED)} />
+  <TaskCard
+    task={makeBasicTask(TaskStatus.COMPLETED)}
+    actions={taskBoardActions}
+  />
 ));
