@@ -3,7 +3,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { Board } from '../components/board';
 import { TaskCard } from '../components/task-card';
 import { TaskStatus } from '../components/types';
 import { makeBasicTask } from './utils';

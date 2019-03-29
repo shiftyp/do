@@ -6,7 +6,7 @@ import { Button } from './button';
 import { TaskList } from './task-list';
 import { TaskModal } from './task-modal';
 
-import './board.css';
+import './task-board.css';
 
 export type BoardComponentProps = { tasks: Task[]; editingTask?: Task, showModal?: boolean };
 
@@ -35,7 +35,7 @@ const BacklogList = ({ tasks }: BoardComponentProps) => (
   </TaskList>
 );
 
-export const Board: React.SFC<BoardComponentProps> = ({ tasks, showModal, editingTask }) => (
+export const TaskBoard: React.SFC<BoardComponentProps> = ({ tasks, showModal, editingTask }) => (
   <div className="board">
     <BacklogList tasks={tasks} />
     <InProgressList tasks={tasks} />
