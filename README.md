@@ -2,10 +2,10 @@
 
 ![Screencapture of Do](assets/do.gif)
 
-"Do" meaning way. A simple kanban board opens many possibilities. To access:
+Do: a verb close to "Dao" which means "The way". A simple kanban board opens many possibilities. To access:
 
-- [Running Demo](https://shiftyp.github.io/do)
-- [Running Storybook](https://shiftyp.github.io/do/storybook)
+- [Demo](https://shiftyp.github.io/do)
+- [Storybook](https://shiftyp.github.io/do/storybook)
 
 ## To run (requires node)
 
