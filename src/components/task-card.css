@@ -8,10 +8,23 @@
   font-weight: normal;
 }
 
+.task-card .card__title {
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border: var(--border);
+  border-bottom: none;
+}
+
+.task-card .card__body {
+  border: var(--border);
+  border-bottom: none;
+  border-top: none;
+}
+
 .task-card__date {
   font-style: italic;
   color: var(--action-purple);
-  font-size: 0.8em;
+  font-size: 0.7rem;
 }
 
 .task-card__date.completed {
