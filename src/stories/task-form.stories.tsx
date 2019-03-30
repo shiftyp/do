@@ -10,10 +10,7 @@ import { makeEmptyTask } from '../utils';
 const { add } = storiesOf('Task Components/Task Form', module);
 
 add('Create', () => (
-  <TaskForm
-    task={makeEmptyTask()}
-    actions={taskBoardActions}
-  />
+  <TaskForm task={makeEmptyTask()} actions={taskBoardActions} />
 ));
 add('Edit', () => (
   <TaskForm

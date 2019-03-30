@@ -12,7 +12,11 @@ export type TaskModalProps = {
   actions: TaskBoardActions;
 };
 
-export const TaskModal: React.SFC<TaskModalProps> = ({ task, open, actions }) => (
+export const TaskModal: React.SFC<TaskModalProps> = ({
+  task,
+  open,
+  actions,
+}) => (
   <Modal title={!isNew(task) ? 'Edit Task' : 'Create Task'} open={open}>
     {open && <TaskForm task={task} actions={actions} />}
   </Modal>

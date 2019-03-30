@@ -64,9 +64,7 @@ const TaskCardDate: React.SFC<TaskCardProps> = ({ task }) => {
       </span>
     );
   } else {
-    return (
-      <span className="task-card__date">Due {formatDate(task.due)}</span>
-    );
+    return <span className="task-card__date">Due {formatDate(task.due)}</span>;
   }
 };
 
@@ -75,10 +73,15 @@ export const TaskCard: React.SFC<TaskCardProps> = ({ task, actions }) => {
   const className = `task-card ${isComplete(task) ? 'completed' : ''}`;
 
   return (
-    <Card onClick={() => {
-      actions.showEditModal(task);
-    }}title={task.title} buttons={buttons} className={className}>
-      <p>{task.description}</p>
+    <Card
+      onClick={() => {
+        actions.showEditModal(task);
+      }}
+      title={task.title}
+      buttons={buttons}
+      className={className}
+    >
+      <p className="task-card__description">{task.description}</p>
       <TaskCardDate task={task} actions={actions} />
     </Card>
   );

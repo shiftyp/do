@@ -11,3 +11,7 @@
 .task-card__date.completed {
   color: var(--action-green);
 }
+
+.task-card__description {
+  margin-top: 0px;
+}

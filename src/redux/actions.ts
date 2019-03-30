@@ -41,16 +41,16 @@ const showEditModal = createSimpleActionCreator<typeof ShowEditModal, null>(
 );
 
 const CloseModal = 'CloseModal';
-const closeModal = createSimpleActionCreator<
-  typeof CloseModal,
-  null
->(CloseModal);
+const closeModal = createSimpleActionCreator<typeof CloseModal, null>(
+  CloseModal
+);
 
-const setTaskStatus = (task: Task, status: TaskStatus) => createOrUpdateTask({
-  ...task,
-  status,
-  completed: null,
-})
+const setTaskStatus = (task: Task, status: TaskStatus) =>
+  createOrUpdateTask({
+    ...task,
+    status,
+    completed: null,
+  });
 
 export const actionTypes = {
   CreateOrUpdateTask,

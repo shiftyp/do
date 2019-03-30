@@ -1,7 +1,7 @@
-import {StoreShape, StandardAction, SimpleReducerMap } from "./types";
-import { actionTypes } from "./actions";
-import { Task, TaskStatus, TaskId } from "../types";
-import { makeEmptyTask, isComplete, isNew } from "../utils";
+import { StoreShape, StandardAction, SimpleReducerMap } from './types';
+import { actionTypes } from './actions';
+import { Task, TaskStatus, TaskId } from '../types';
+import { makeEmptyTask, isComplete, isNew } from '../utils';
 
 const defaultState: StoreShape = {
   tasks: {},
@@ -14,30 +14,33 @@ const defaultState: StoreShape = {
     completed: null,
   },
   nextTaskId: 0,
-}
+};
 
 function wrapSimpleReducers(map: SimpleReducerMap) {
-  return function(state: StoreShape = defaultState, action: StandardAction<any, any>) {
+  return function(
+    state: StoreShape = defaultState,
+    action: StandardAction<any, any>
+  ) {
     const reducer = map[action.type];
 
     if (reducer) {
       return reducer(state, (action as any).payload);
     }
-    
+
     return state;
-  }
-};
+  };
+}
 
 export const reducer = wrapSimpleReducers({
   [actionTypes.CreateOrUpdateTask]: (state, task: Task) => {
     let finalTask = task;
-    let {nextTaskId} = state;
+    let { nextTaskId } = state;
 
     if (isNew(finalTask)) {
       finalTask = {
         ...finalTask,
         id: nextTaskId++,
-      }
+      };
     }
 
     if (isComplete(finalTask) && !finalTask.completed) {
@@ -61,7 +64,7 @@ export const reducer = wrapSimpleReducers({
     tasks: {
       ...state.tasks,
       [taskId]: null,
-    }
+    },
   }),
   [actionTypes.ShowCreateModal]: (state: StoreShape, status: TaskStatus) => ({
     ...state,
@@ -73,10 +76,9 @@ export const reducer = wrapSimpleReducers({
     modalVisible: true,
     editTask: task,
   }),
-  [actionTypes.CloseModal]: (state) => ({
+  [actionTypes.CloseModal]: state => ({
     ...state,
     modalVisible: false,
     editTask: makeEmptyTask(),
-  })
+  }),
 });
-

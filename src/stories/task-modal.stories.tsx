@@ -9,7 +9,13 @@ import { makeEmptyTask } from '../utils';
 
 const { add } = storiesOf('Task Components/Task Modal', module);
 
-add('Create', () => <TaskModal task={makeEmptyTask()} open={true} actions={taskBoardActions} />);
+add('Create', () => (
+  <TaskModal task={makeEmptyTask()} open={true} actions={taskBoardActions} />
+));
 add('Edit', () => (
-  <TaskModal task={makeBasicTask(TaskStatus.BACKLOG)} open={true} actions={taskBoardActions}/>
+  <TaskModal
+    task={makeBasicTask(TaskStatus.BACKLOG)}
+    open={true}
+    actions={taskBoardActions}
+  />
 ));

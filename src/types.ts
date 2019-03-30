@@ -1,4 +1,4 @@
-import { number } from "prop-types";
+import { number } from 'prop-types';
 
 export enum TaskStatus {
   BACKLOG,

@@ -22,7 +22,7 @@ export class TaskForm extends React.Component<TaskFormProps> {
       ...task,
       title: this.form._title.value,
       description: this.form.description.value,
-      due: unUtcShiftDate(this.form.due.valueAsDate)
+      due: unUtcShiftDate(this.form.due.valueAsDate),
     });
     actions.closeModal();
   };
@@ -72,7 +72,7 @@ export class TaskForm extends React.Component<TaskFormProps> {
             this.form = ref;
           }
         }}
-        onSubmit={(event) => {
+        onSubmit={event => {
           this.submit();
           event.preventDefault();
         }}
@@ -93,7 +93,9 @@ export class TaskForm extends React.Component<TaskFormProps> {
           name="due"
           type="date"
           placeholder="Due On"
-          defaultValue={utcShiftDate(task.due).toISOString().substr(0, 10)}
+          defaultValue={utcShiftDate(task.due)
+            .toISOString()
+            .substr(0, 10)}
         />
         {this.renderButtonBar()}
       </form>

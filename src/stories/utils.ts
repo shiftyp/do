@@ -1,7 +1,6 @@
+import { action } from '@storybook/addon-actions';
 
-import {action} from '@storybook/addon-actions';
-
-import { TaskStatus, Task } from "../types";
+import { TaskStatus, Task } from '../types';
 import { TaskBoardActions } from '../components/task-board';
 
 export const makeBasicTask = (status: TaskStatus): Task => ({
