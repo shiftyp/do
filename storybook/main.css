@@ -70,22 +70,15 @@
 .card__title {
   margin: 0;
   padding: 20px 10px 0 10px;
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: 600;
-  border-top-right-radius: var(--border-radius);
-  border-top-left-radius: var(--border-radius);
-  border: var(--border);
-  border-bottom: none;
   color: var(--card-title-color);
 }
 
 .card__body {
   padding: 20px 10px 20px 10px;
-  border: var(--border);
-  border-bottom: none;
-  border-top: none;
   color: var(--card-color);
-  font-size: 0.9em;
+  font-size: 0.8rem;
   -webkit-flex: 1 1;
           flex: 1 1;
 }
@@ -95,14 +88,6 @@
   display: flex;
   -webkit-flex-direction: row;
           flex-direction: row;
-}
-
-.card__button-bar:empty {
-  border: var(--border);
-  border-top: none;
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-  height: var(--border-radius);
 }
 
 .card__button-bar .button {
@@ -173,10 +158,23 @@
   font-weight: normal;
 }
 
+.task-card .card__title {
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border: var(--border);
+  border-bottom: none;
+}
+
+.task-card .card__body {
+  border: var(--border);
+  border-bottom: none;
+  border-top: none;
+}
+
 .task-card__date {
   font-style: italic;
   color: var(--action-purple);
-  font-size: 0.8em;
+  font-size: 0.7rem;
 }
 
 .task-card__date.completed {
@@ -254,5 +252,6 @@
 .board > .card:first-child {
   margin-left: 0;
 }
+
 
 /*# sourceMappingURL=main.css.map*/
