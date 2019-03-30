@@ -14,3 +14,5 @@ export const isNew = (task: Task) => task.id === undefined;
 export const isComplete = (task: Task) => task.status === TaskStatus.COMPLETED;
 
 export const formatDate = (date: Date) => date.toLocaleDateString();
+export const utcShiftDate = (date: Date) => new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+export const unUtcShiftDate = (date: Date) => new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
