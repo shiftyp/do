@@ -2,6 +2,12 @@
   background-color: var(--card-complete-background);
 }
 
+.task-card.completed .task-card__description,
+.task-card.completed .card__title {
+  font-style: italic;
+  font-weight: normal;
+}
+
 .task-card__date {
   font-style: italic;
   color: var(--action-purple);
