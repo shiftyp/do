@@ -82,7 +82,7 @@ export class TaskForm extends React.Component<TaskFormProps> {
           type="text"
           placeholder="Title"
           defaultValue={task.title}
-          required={true}
+          autoFocus={true}
         />
         <textarea
           name="description"
