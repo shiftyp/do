@@ -118,6 +118,7 @@
 .card__button-bar .button:last-child {
   border-bottom-right-radius: var(--border-radius);
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -164,6 +165,12 @@
 }
 .task-card.completed {
   background-color: var(--card-complete-background);
+}
+
+.task-card.completed .task-card__description,
+.task-card.completed .card__title {
+  font-style: italic;
+  font-weight: normal;
 }
 
 .task-card__date {
